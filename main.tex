@@ -1,0 +1,116 @@
+\documentclass[12pt, a4paper, roman, twoside]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+%
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+%
+\usepackage{ragged2e}
+%
+% personal data
+\name{Denis}{Jacob Machado}
+\title{Academic Interests}                               % optional, remove / comment the line if not wanted
+\address{Av. Otacilio Tomanick 586}{CEP 05363-000, São Paulo--SP, Brazil}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+55~(11)~98946~3314}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{+55~(11)~3091~7615}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{denisjacobmachado@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://about.me/machadodj}                         % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%
+% formatação básica de cabeçalhos e rodapés
+\usepackage{fancyhdr} % Usar os estilos do pacote fancyhdr
+    \pagestyle{fancy} % Páginas estilo fancy
+    \fancypagestyle{plain}{\fancyhf{}}
+    \renewcommand{\headrulewidth}{0pt} % Sem linha no cabeçalho
+    \headheight 13pt % Altura do cabeçalho
+    \footskip 30pt
+    \renewcommand{\footrulewidth}{0pt} % Sem linha no rodapé
+    \newcommand{\helv}{
+        %\sffamily
+        \fontsize{9}{11}\selectfont} % Comando para alterar fonte de cabeçalhos e rodapés
+    % cor do texto em cabeçalhos e rodapés
+    \usepackage{xcolor}
+    \usepackage{etoolbox}
+    \makeatletter
+    \patchcmd{\@fancyhead}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\headrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \patchcmd{\@fancyfoot}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\footrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \makeatother
+    \fancyfoot[LE]{\nouppercase{\helv\small{\thepage}}} % Rodapé na esquerda nas paginas pares
+    \fancyhead[LE]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na esquerda nas páginas pares
+    \fancyfoot[RO]{\nouppercase{\helv\small{\thepage}}} % Rodapé na direita nas páginas ímpares
+    \fancyhead[RO]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na direita nas páginas ímpares
+    \nopagenumbers{} % uncomment to suppress automatic style numbering
+%
+\begin{document}\thispagestyle{empty} % Remove cabeçalho e rodapé da primeira página
+    \recipient{Application for Postdoctoral Fellow}{EDITAL DE SELEÇÃO PNPD/CAPES No 01/2018\\Interunidades em Bioinformática}
+    \date{August 8, 2018}
+    \opening{Dear Sir or Madam,}
+    \closing{Yours faithfully,}
+\makelettertitle
+%
+\justifying
+%
+    I would like to provide the following \textbf{Research Interest Statement} to be attached to my application.
+%
+\section*{Early Research Experience}{\setlength{\parindent}{5ex}
+	During high school, I enrolled at the State Technical School's (ETE) Data Processing program. While researching NP-hard problems during one of my computer programing classes, I discovered the famous "Zilla" matrix and the methods to handle it in a phylogenetic framework. These methods provided an exciting possibility to combine two passions: logical puzzles and nature, which led me to study biology at the São Paulo State University (UNESP).
+	
+	At UNESP I assisted the botanist Dr. Selma Rodrigues with informatics and biostatistics while learning the art of scientific investigation. But the animal kingdom eventually picked up my curiosity. An internship at the Research Group on Crustaceans Biology (CRUSTA) introduced me to taxonomy, ecology, and comparative biology. At the end of this internship, I felt that the CRUSTA's ecological focus left little space for systematic studies. It was then that one of my professors recommended Dr. Fernando Marques, from the University of São Paulo (USP), as someone who would share my interests in meticulous work and Systematics.
+	
+	I worked with Dr. Fernando Marques for four years. His laboratory offered me the possibility to study phylogenetic systematics and biogeography in the framework of an essential problem in Historical Biogeography: the origin of freshwater stingrays. In Dr. Marques' lab, I was also introduced to molecular biology and was responsible for most of the DNA sequencing of cestode parasites. Dealing with the everyday problems of a multidisciplinary lab as well as with the unforeseen circumstances that arise in any complex project, I start developing multitasking and problem-solving skills. Also, I had the chance to collaborate with other scientists on molecular systematics, such as the copepodologists Dr. Carlos da Rocha, from USP, and Grace Wyngaard, from James Madison University. That is how I learned the importance of scientific collaboration: experiencing exciting discussions between fellow scientists that lead to scientific insights.
+	
+	It was during that time that I also received practical my first practical lessons about scientific funding as the two grant proposals Dr. Marques and I wrote were accepted by one of the most prestigious and rigorous scientific funding agencies in Brazil, the State of São Paulo Research Foundation (FAPESP). Later, FAPESP also granted me a Ph.D. scholarship. In total, FAPESP financed my research for nine years, including the year I visited the University of North Carolina (UNC) at Charlotte to work at the Department of Bioinformatics and Genomics as an International Research Scholar under Professor Daniel Janies supervision.
+	}
+%
+\section{Experience in Bioinformatics}{\setlength{\parindent}{5ex}
+    I concluded my master studies in zoology under the supervision of Dr. Fernando Marques in 2012. Following my thesis defense, I was immediately offered a position as a Ph.D. student at Professor Taran Grant's lab. Professor Grant enjoyed my aptitude for the philosophical and theoretical aspects of phylogenetic systematics and shared with me the view that basic research with non-model organisms had much to gain by approaching the cutting edge methods in bioinformatics.
+    
+	FAPESP supported my Ph.D. since I enrolled in the Interunits Graduate Program in Bioinformatics at USP until I defended my doctoral dissertation on April 10th, this year (2018).  This dissertation was the first of that program to combine phylogenetics, computational biology, and bioinformatics focusing on non-model organisms. I was also the first Ph.D. student of that program to publish as a single author on an international bioinformatics journal (BMC Bioinformatics; DOI: \href{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0642-9}{10.1186/s12859-015-0642-9}) and to win a Willi Hennig Award (awarded at the XXXII meeting of the Willi Hennig Society, Rostock University, Germany, 2013).
+	
+	In 2015 I applied for a FAPESP's Research Internship Abroad (BEPE), which allowed me to work at the Department of Bioinformatics and Genomics of the UNC Charlotte for one year (Jan. 2016 to Jan. 2017) under the supervision of Professor Daniel Janies. This opportunity allowed me to develop projects on non-model amphibians but also to reduce the gap between basic and applied research in many fructiferous collaborations, including presentations in international scientific events (Schneider \& Machado, 2018, at the Virus Genomics and Evolution Meeting, and Schneider, Machado, Lambodhar \& Janies, 2017, at the 5$^{th}$ International Quest for Orthologs Meeting), awards (Most Implementable Solution at the 2016 Zika Innovation Hack-a-thon, Boston, USA), and publications (Machado, Janies, Brouwer \& Grant, 2018; DOI: \href{https://www.ncbi.nlm.nih.gov/pubmed/29721275}{10.1002/ece3.3918}). Additionally, my experience with bioinformatics and multidisciplinary research resulted in Dr. Larry Antonio Jiménez Ferbans invitation for me to give the first course in bioinformatics of the University of Magdalena (Santa Marta, Colombia) in 2017. This year, the Graduate Program in Zoology of the USP invited me to give the same course, which was also their first course on bioinformatics.
+	}
+%
+\section{Academic Interests}{\setlength{\parindent}{5ex}
+    The break of new technologies such as high-throughput DNA sequencing and machines yields large datasets that we can incorporate in the phylogenetic systematics and comparative genomics of non-model organisms. However, this creates a demand by the scientific community for computational methods to keep up with this increased flow of information in a transparent, reproducible, and user-friendly manner.
+    
+	I have developed and keep working from tools to analyze large datasets and phylogenetic results (YBYRÁ, available at \href{https://gitlab.com/MachadoDJ/ybyra}{gitlab.com/MachadoDJ/ybyra}; DOI: \href{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0642-9}{10.1186/s12859-015-0642-9}) to pipelines and strategies to unveil genomic information from non-model organisms (AWA, available at \href{https://gitlab.com/MachadoDJ/awa}{gitlab.com/MachadoDJ/awa}; DOI: \href{https://www.ncbi.nlm.nih.gov/pubmed/29721275}{10.1002/ece3.3918}). I am also working on collaborative projects on the assembly and annotation of genomes from groups of animals from which no close reference genome is available.
+	
+	I am sending this application for a for postdoctoral fellow
+at the Interunits Graduation Program in Bioinformatics because I see the it as a place that has opportunities for me to apply my talents in cutting-edge omics analyses and share my passion for teaching and researching.
+    }
+%
+\vspace{2em}
+
+Thank you very much for your attention.
+
+\vspace{1em}
+%
+\makeletterclosing
+%
+\end{document}
